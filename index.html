@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>避风港</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <script src="script.js" defer></script>
+    <meta http-equiv="Cache-Control" content="max-age=86400">
+    <link rel="manifest" href="manifest.json">
+    <link rel="preload" as="image" href="img/top.jpg">
+    <link rel="preload" as="image" href="img/fengmian.jpg">
+</head>
+<body>
+    <div class="video-background">
+        <video 
+            autoplay 
+            muted 
+            loop 
+            playsinline
+            preload="auto"
+            id="bgVideo"
+            style="width: 100%; height: 100%; object-fit: cover;"
+        >
+            <source src="background/bk.mp4" type="video/mp4" media="all and (min-width: 768px)">
+            <source src="background/bk-mobile.mp4" type="video/mp4" media="all and (max-width: 767px)">
+            您的浏览器不支持 HTML5 视频。
+        </video>
+    </div>
+    
+    <!-- 顶部标题 -->
+    <div class="header" style="width: 100%; overflow: visible; height: 250px; text-align: center; display: flex; align-items: center; justify-content: center;">
+        <img src="img/top.jpg" alt="顶部图片" style="width: 180%; max-width: none; height: 100%; object-fit: cover; display: block;">
+    </div>
+
+    <!-- 专辑播放 -->
+    <div class="album-container">
+        <!-- 第一页 -->
+        <div class="album-page" data-page="1">
+            <div class="album-row">
+                <div class="album" data-audio="mp3/fcwy.mp3" data-title="腐草为萤">
+                    <img src="img/fcwy.jpg" alt="腐草为萤" class="album-img">
+                    <h3>腐草为萤</h3>
+                    <audio controls class="album-audio" id="audio-fcwy" data-title="腐草为萤">
+                        <source src="mp3/fcwy.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div class="album" data-audio="mp3/jlc.mp3" data-title="锦鲤抄">
+                    <img src="img/jlc.jpg" alt="锦鲤抄" class="album-img">
+                    <h3>锦鲤抄</h3>
+                    <audio controls class="album-audio" id="audio-jlc" data-title="锦鲤抄">
+                        <source src="mp3/jlc.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+            </div>
+            <div class="album-row">
+                <div class="album" data-audio="mp3/lgxm.mp3" data-title="泸沽寻梦">
+                    <img src="img/lgxm.jpg" alt="泸沽寻梦" class="album-img">
+                    <h3>泸沽寻梦</h3>
+                    <audio controls class="album-audio" id="audio-lgxm" data-title="泸沽寻梦">
+                        <source src="mp3/lgxm.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div class="album" data-audio="mp3/qsx.mp3" data-title="牵丝戏">
+                    <img src="img/qsx.jpg" alt="牵丝戏" class="album-img">
+                    <h3>牵丝戏</h3>
+                    <audio controls class="album-audio" id="audio-qsx" data-title="牵丝戏">
+                        <source src="mp3/qsx.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 第二页 -->
+        <div class="album-page" data-page="2" style="display: none;">
+            <div class="album-row">
+                <div class="album" data-audio="mp3/tljx.mp3" data-title="棠梨煎雪">
+                    <img src="img/tljx.jpg" alt="棠梨煎雪" class="album-img">
+                    <h3>棠梨煎雪</h3>
+                    <audio controls class="album-audio" id="audio-tljx" data-title="棠梨煎雪">
+                        <source src="mp3/tljx.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div class="album" data-audio="mp3/lgj.mp3" data-title="流光记">
+                    <img src="img/lgj.jpg" alt="流光记" class="album-img">
+                    <h3>流光记</h3>
+                    <audio controls class="album-audio" id="audio-lgj" data-title="流光记">
+                        <source src="mp3/lgj.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+            </div>
+            <div class="album-row">
+                <div class="album" data-audio="mp3/fsc.mp3" data-title="浮生辞">
+                    <img src="img/fsc.jpg" alt="浮生辞" class="album-img">
+                    <h3>浮生辞</h3>
+                    <audio controls class="album-audio" id="audio-fsc" data-title="浮生辞">
+                        <source src="mp3/fsc.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div class="album" data-audio="mp3/chfc.mp3" data-title="沧海飞尘">
+                    <img src="img/chfc.jpg" alt="沧海飞尘" class="album-img">
+                    <h3>沧海飞尘</h3>
+                    <audio controls class="album-audio" id="audio-chfc" data-title="沧海飞尘">
+                        <source src="mp3/chfc.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+            </div>
+        </div>
+
+        <!-- 第三页 -->
+        <div class="album-page" data-page="3" style="display: none;">
+            <div class="album-row">
+                <div class="album" data-audio="mp3/blm.mp3" data-title="不老梦">
+                    <img src="img/blm.jpg" alt="不老梦" class="album-img">
+                    <h3>不老梦</h3>
+                    <audio controls class="album-audio" id="audio-blm" data-title="不老梦">
+                        <source src="mp3/blm.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div class="album" data-audio="mp3/zwm.mp3" data-title="枕万梦">
+                    <img src="img/zwm.jpg" alt="枕万梦" class="album-img">
+                    <h3>枕万梦</h3>
+                    <audio controls class="album-audio" id="audio-zwm" data-title="枕万梦">
+                        <source src="mp3/zwm.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 分页控件 -->
+    <div class="pagination">
+        <button class="page-btn prev-btn">上一页</button>
+        <div class="page-numbers">
+            <span class="page-number active">1</span>
+            <span class="page-number">2</span>
+            <span class="page-number">3</span>
+        </div>
+        <button class="page-btn next-btn">下一页</button>
+    </div>
+
+    <div class="bottom-bar">
+        <div class="album-info">
+            <div class="album-cover">
+                <img src="./img/fengmian.jpg" alt="专辑封面" id="bottom-cover">
+            </div>
+            <h4 class="album-title" id="bottom-title">默认专辑</h4>
+        </div>
+        <div class="progress-section">
+            <div class="time-progress">
+                <span class="current-time">00:00</span>
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                    <div class="progress-handle"></div>
+                </div>
+                <span class="total-time">00:00</span>
+            </div>
+        </div>
+        <div class="lyrics-btn">
+            <button>展开歌词</button>
+        </div>
+    </div>
+
+    <div class="lyrics-page">
+        <button class="back-btn">
+            <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="lyrics-container">
+            <div class="lyrics-album-cover">
+                <img src="./img/fengmian.jpg" alt="专辑封面" id="lyrics-cover">
+            </div>
+            <div class="lyrics-content">
+                <!-- 歌词内容将通过JavaScript动态添加 -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
